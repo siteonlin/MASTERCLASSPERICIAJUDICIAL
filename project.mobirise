@@ -14,7 +14,7 @@
         "dangerColor": "#ff9966",
         "mainFont": "Jost",
         "display1Font": "Rubik",
-        "display1Size": "4",
+        "display1Size": "3.4",
         "display2Font": "Rubik",
         "display2Size": 3,
         "display5Font": "Rubik",
@@ -52,7 +52,7 @@
     "siteUrl": false,
     "cookiesAlert": false,
     "gdpr": false,
-    "uniqCompNum": 21,
+    "uniqCompNum": 24,
     "versionPublish": "5.3.0",
     "screenshot": "screenshot.png",
     "chatbutton": {
@@ -600,6 +600,168 @@
           "_once": false,
           "_params": {},
           "_anchor": "video5-i"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              "& when (@overlay)": {
+                ".mbr-overlay": {
+                  "background": "@overlayColor",
+                  "opacity": "@overlayOpacity"
+                }
+              }
+            },
+            ".mbr-overlay": {
+              "z-index": "1"
+            },
+            ".main-container-text": {
+              "display": "flex",
+              "flex-direction": "column",
+              "width": "100%",
+              "padding": "0 1rem",
+              "margin": "0 auto 65px",
+              "flex-shrink": "1",
+              "position": "relative",
+              "z-index": "2",
+              "@media (max-width: 767px)": {
+                "margin-bottom": "30px"
+              },
+              "@media (max-width: 991px)": {
+                "padding": "0 0.75rem"
+              }
+            },
+            ".item-title": {
+              "width": "100%",
+              "color": "#e6c63b"
+            },
+            ".mbr-text": {
+              "color": "#ffffff"
+            },
+            ".main-container": {
+              "display": "flex",
+              "flex-wrap": "wrap",
+              "position": "relative",
+              "z-index": "2"
+            },
+            ".card-container": {
+              "display": "flex",
+              "& .card": {
+                "border-radius": "0",
+                "& .item-img": {
+                  "height": "450px",
+                  "display": "flex",
+                  "@media (max-width: 767px)": {
+                    "height": "400px"
+                  },
+                  "& img": {
+                    "width": "100%",
+                    "object-fit": "cover",
+                    "height": "450px",
+                    "@media (max-width: 767px)": {
+                      "height": "400px"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "_name": "gallery4",
+          "_customHTML": "<section class=\"gallery4\" group=\"Header\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <input type=\"id\" name=\"sliderId\">\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" required parallax>\n            <input type=\"image\" title=\"Image\" value=\"@ADDONS_PATH@/appm5/components/_images/background3.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#000000\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type == 'image'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type == 'image'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n\n    <div class=\"main-container-text\" mbr-if=\"showLabel || showTitle\">\n        <h3 class=\"item-title mbr-fonts-style align-center mb-2\" mbr-theme-style=\"display-1\" data-app-selector=\".item-title\" mbr-if=\"showTitle\">\n            <b>QUANTO GANHA UM PERITO JUDICIAL</b></h3>\n        <p class=\"mbr-text mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">FONTE: VAGAS.COM&nbsp;<br>Conheça mais sobre o cargo Perito Judicial. Veja quanto ganha, o que faz e a trajetória de carreira. <br>No cargo de Perito Judicial se inicia ganhando <b>R$ 4.125,00 </b>de salário e pode vir <br>a ganhar até <b>R$ 8.790,00</b>. A média salarial para Perito Judicial no Brasil é de <br><b>R$ 6.490,00.</b> A formação mais comum é de Graduação em <br>Engenharia Civil, e Avaliação de Imóveis feita por corretores.<br>A faixa salarial do Avaliador de Imóveis fica entre <b>R$ 1.485,88 </b>salário <br>mediana da pesquisa e o teto salarial de <b>R$ 3.706,02</b>, sendo que R$ <b>1.689,70</b> é a média <br>do piso salarial 2022 de acordos coletivos levando em conta profissionais em regime CLT de todo o Brasil.<br><b>Hoje no Brasil existe um valor mínimo por laudo que varia de R$1899,03 a R$3144.41</b><br><br>Veja as áreas de formação mais cursadas por pessoas dessa área.<br><br>Corretor de imóveis<br>Engenheiro<br>Enfermeira<br>Bacharel em direito<br>Biomédicos<br>Médicos<br>Dentistas<br>Psicólogos<br>Contador<br><br>É IMPORTANTE VOCÊ SABER QUE TODA GRADUAÇÃO OU CURSO <br>TÉCNICO FARÁ DO CANDIDATO UM PERITO JUDICIAL<br><br></p>\n    </div>\n    <div class=\"main-container col-12\">\n        <div class=\"card-container col-12\">\n            <div class=\"col-12 card\">\n                <div class=\"item-img\">\n                    <img src=\"@PROJECT_PATH@/assets/images/captura-de-tela-2022-02-26-as-19.21.19.png\" alt>\n                </div>\n            </div>\n        </div>\n    </div>\n\n</section>",
+          "_cid": "sYAwce2CnV",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "gallery4-m"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 1rem)",
+            "padding-bottom": "(@paddingBottom * 1rem)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              "& when (@overlay)": {
+                ".mbr-overlay": {
+                  "background": "@overlayColor",
+                  "opacity": "@overlayOpacity"
+                }
+              }
+            },
+            ".mbr-overlay": {
+              "z-index": "1"
+            },
+            ".main-container-text": {
+              "display": "flex",
+              "flex-direction": "column",
+              "width": "100%",
+              "padding": "0 1rem",
+              "margin": "0 auto 65px",
+              "flex-shrink": "1",
+              "position": "relative",
+              "z-index": "2",
+              "@media (max-width: 767px)": {
+                "margin-bottom": "30px"
+              },
+              "@media (max-width: 991px)": {
+                "padding": "0 0.75rem"
+              }
+            },
+            ".item-title": {
+              "width": "100%",
+              "color": "#e6c63b"
+            },
+            ".mbr-text": {
+              "color": "#ffffff"
+            },
+            ".main-container": {
+              "display": "flex",
+              "flex-wrap": "wrap",
+              "position": "relative",
+              "z-index": "2"
+            },
+            ".card-container": {
+              "display": "flex",
+              "& .card": {
+                "border-radius": "0",
+                "& .item-img": {
+                  "height": "450px",
+                  "display": "flex",
+                  "@media (max-width: 767px)": {
+                    "height": "400px"
+                  },
+                  "& img": {
+                    "width": "100%",
+                    "object-fit": "cover",
+                    "height": "450px",
+                    "@media (max-width: 767px)": {
+                      "height": "400px"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "_name": "gallery4",
+          "_sourceTheme": "mobirise5",
+          "_customHTML": "<section class=\"gallery4\" group=\"Header\" mbr-class=\"{'mbr-parallax-background': bg.parallax}\">\n    <mbr-parameters>\n        <input type=\"id\" name=\"sliderId\">\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Title\" name=\"showTitle\">\n        <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\" required parallax>\n            <input type=\"image\" title=\"Image\" value=\"@PROJECT_PATH@/assets/images/background3.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#000000\" selected>\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type == 'image'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type == 'image'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n\n    <div class=\"main-container-text\" mbr-if=\"showLabel || showTitle\">\n        <h3 class=\"item-title mbr-fonts-style align-center mb-2\" mbr-theme-style=\"display-1\" data-app-selector=\".item-title\" mbr-if=\"showTitle\">\n            <b>QUANTO GANHA UM PERITO JUDICIAL</b></h3>\n        <p class=\"mbr-text mbr-fonts-style align-center mb-0\" mbr-theme-style=\"display-4\" mbr-if=\"showText\" data-app-selector=\".mbr-text\">FONTE: VAGAS.COM - Conheça mais sobre o cargo Perito Judicial. Veja quanto ganha, o que faz e a trajetória de carreira. No cargo de Perito Judicial se inicia ganhando <b>R$ 4.125,00 </b>de salário e pode vir a ganhar até <b>R$ 8.790,00</b>. A média salarial para Perito Judicial no Brasil é de <br><b>R$ 6.490,00.</b> A formação mais comum é de Graduação em Engenharia Civil, e Avaliação de Imóveis feita por corretores.<br>A faixa salarial do Avaliador de Imóveis fica entre <b>R$ 1.485,88 </b>salário mediana da pesquisa e o teto salarial de <b>R$ 3.706,02</b>, sendo que R$ <b>1.689,70</b> é a média do piso salarial 2022 de acordos coletivos levando em conta profissionais em regime CLT de todo o Brasil.<br><br><br><br></p>\n    </div>\n    <div class=\"main-container col-12\">\n        <div class=\"card-container col-12\">\n            <div class=\"col-12 card\">\n                <div class=\"item-img\">\n                    <img src=\"@PROJECT_PATH@/assets/images/captura-de-tela-2022-02-26-as-19.42.33.png\" alt>\n                </div>\n            </div>\n        </div>\n    </div>\n\n</section>",
+          "_anchor": "gallery4-n",
+          "_isUserblock": true,
+          "_cid": "sYABpvCnF6",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
         },
         {
           "alias": false,
