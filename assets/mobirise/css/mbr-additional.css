@@ -762,7 +762,7 @@ a {
 .cid-sWS8fAtCVx {
   padding-top: 6rem;
   padding-bottom: 6rem;
-  background-image: url("../../../assets/images/mbr-1.jpg");
+  background-image: url("../../../assets/images/black-and-red-gaming-youtube-channel-art.png");
 }
 .cid-sWS8fAtCVx .video-wrapper iframe {
   width: 100%;
@@ -1063,6 +1063,40 @@ a {
 .cid-sWSad7Ombw H4 {
   color: #ffffff;
 }
+.cid-sYywSmFnch {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-image: url("../../../assets/images/black-and-red-gaming-youtube-channel-art.png");
+}
+.cid-sYywSmFnch .row {
+  flex-direction: row-reverse;
+}
+.cid-sYywSmFnch .video-wrapper iframe {
+  width: 100%;
+}
+.cid-sYywSmFnch .mbr-section-title,
+.cid-sYywSmFnch .mbr-description {
+  text-align: center;
+}
+@media (min-width: 992px) {
+  .cid-sYywSmFnch .text-wrapper {
+    padding: 2rem;
+  }
+}
+.cid-sYywSmFnch .mbr-section-title {
+  color: #e6c63b;
+}
+.cid-sYywSmFnch .mbr-section-subtitle {
+  color: #e6c63b;
+  text-align: center;
+}
+.cid-sYywSmFnch .mbr-text {
+  color: #ffffff;
+  text-align: center;
+}
+.cid-sYywSmFnch .mbr-description {
+  color: #ffffff;
+}
 .cid-sWSbPQRYM6 {
   padding-top: 3rem;
   padding-bottom: 3rem;
@@ -1155,6 +1189,21 @@ a {
 .cid-sWSi9fnEjT .mbr-section-title,
 .cid-sWSi9fnEjT .social-list {
   color: #ffffff;
+}
+.cid-sYyAFj1cYx {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  background-color: #000000;
+}
+.cid-sYyAFj1cYx .image-wrap img {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .cid-sYyAFj1cYx .image-wrap img {
+    display: block;
+    margin: auto;
+    width: 60%;
+  }
 }
 .cid-sWSjxiIeOa {
   padding-top: 30px;
